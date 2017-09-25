@@ -10,9 +10,9 @@
 /**
  * @brief compute function definition
  *
- * Computes the control variable for a given
- * target velocity orsetpoint (sp) and
- * actual velocity or process varibale (pv)
+ * Computes new velocity for a given
+ * target velocity or setpoint (sp) and
+ * actual velocity or process variable (pv)
  *
  *
  * @param error is the difference between sp and pv
@@ -20,20 +20,22 @@
  * @param prevError is the previous error
  * @param sumError is the sum of all errors multiplied by dt
  * @param changeError is the differnece of error and previous error over dt
- * @param cv is the control variable it is calculated by
+ * @param nv is the new calculated velocity
+ * @param cv is the control variable. it is calculated by
  * muliplying error, sumError and prevError to their respective gains and then adding them
  *
- * @return cv
+ * @return nv, the new velocity
  */
 
 
 double PID::compute(double sp, double pv) {
-  double cv = 5;
+  double cv;
+  double nv = 5;  // stub implementation
   double error;
   double prevError = 0;  // Initialize
   double sumError;
   double changeError;
-  return cv;
+  return nv;
 }
 
 /**
