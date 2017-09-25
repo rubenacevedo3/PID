@@ -22,7 +22,7 @@
 class PID {
   double Kp, Kd, Ki;
  public:
-  double dt;
+  double dt = 0;  // initialize for unit test
   PID(double, double, double);
   double compute(double, double);
 };

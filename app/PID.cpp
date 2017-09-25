@@ -7,9 +7,6 @@
  */
 
 #include<PID.h>
-
-double dt = 0;  // Initialize for unit test
-
 /**
  * @brief compute function definition
  *
