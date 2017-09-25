@@ -22,8 +22,9 @@
 class PID {
   double Kp, Kd, Ki;
  public:
-  double dt = 0;  // initialize for unit test
-  PID(const double, const double, const double);
+  double dt;
+  PID(const double&, const double&, const double&, const double&);
+  PID();
   double compute(double, double);
 };
 #endif

@@ -26,8 +26,9 @@
  * @return cv
  */
 
+
 double PID::compute(double sp, double pv) {
-  double cv = 5;  // initialization for stub
+  double cv = 5;
   double error;
   double prevError = 0;  // Initialize
   double sumError;
@@ -36,10 +37,23 @@ double PID::compute(double sp, double pv) {
 }
 
 /**
- * @brief constructor to take in values of Kp, Kd, Ki
+ * @brief constructor to take in values of Kp, Kd, Ki, dt
  */
-PID::PID(const double a, const double b, const double c) {
+PID::PID(const double& a, const double& b, const double& c, const double& d) {
   Kp = a;
   Kd = b;
   Ki = c;
+  dt = d;
+}
+
+/**
+ * @brief overloaded constructor with default values of Kp, Kd, Ki, dt
+ */
+
+PID::PID() {
+  Kp = 1;
+  Kd = 1;
+  Ki = 1;
+  dt = 0;  // should not be zero to pass test
+
 }
