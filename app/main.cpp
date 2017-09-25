@@ -29,7 +29,7 @@ int main() {
   std::this_thread::sleep_for(std::chrono::seconds(3));  // delay program for 3 seconds so user can view above message
   while (true) {
     NV = controller.compute(SP, PV);
-    std::cout << "Current Velocity: " << PV << "   Target Velocity: " << NV
+    std::cout << "Current Velocity: " << NV << "   Target Velocity: " << SP
               << std::endl;
   }
   return 0;
