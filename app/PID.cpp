@@ -27,7 +27,7 @@
  */
 
 double PID::compute(double sp, double pv) {
-  double cv;
+  double cv = 5;  // initialization for stub
   double error;
   double prevError = 0;  // Initialize
   double sumError;
@@ -38,7 +38,7 @@ double PID::compute(double sp, double pv) {
 /**
  * @brief constructor to take in values of Kp, Kd, Ki
  */
-PID::PID(double a, double b, double c) {
+PID::PID(const double a, const double b, const double c) {
   Kp = a;
   Kd = b;
   Ki = c;
