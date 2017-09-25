@@ -10,13 +10,13 @@
 /**
  * @brief Unit test for compute method
  *
- * Checks if compute function returns 0
- * when setpoint is equal to process variable
+ * Checks if compute function returns the current velocity
+ * when set point is equal to current velocity
  */
 
-TEST(computeTest, IF_SP_EQ_PV_RET_0) {
+TEST(computeTest, IF_SP_EQ_PV_RET_PV) {
   PID p(1, 2, 3, 4);
-  EXPECT_EQ(0, p.compute(23, 23));
+  EXPECT_EQ(23, p.compute(23, 23));
 }
 
 /**
