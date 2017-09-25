@@ -15,7 +15,7 @@
  */
 
 TEST(computeTest, IF_SP_EQ_PV_RET_0) {
-  PID p(1, 2, 3);
+  PID p(1, 2, 3, 4);
   EXPECT_EQ(0, p.compute(23, 23));
 }
 
@@ -27,9 +27,11 @@ TEST(computeTest, IF_SP_EQ_PV_RET_0) {
  */
 
 TEST(timeInterval, timeIntervalNotZero) {
-  PID q(1, 2, 3);
+  PID q;
   EXPECT_NE(0, q.dt);
 }
+
+
 
 
 
