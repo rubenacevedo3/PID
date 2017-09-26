@@ -27,6 +27,9 @@
 
 double PID::compute(double sp, double pv) {
 	auto error = sp -pv;
+	/**
+	 *This makes sure to stop computing if the actual velocity is at the target velocity
+	 */
 	if(error == 0) {
 		integral = 0;
 		previousError = 0;
@@ -34,9 +37,13 @@ double PID::compute(double sp, double pv) {
 	}
 
 	integral = integral + error*dt;
+	/**
+	 *This caps the integral if it gets too large and unhelpful for the program
+	 */
 	if (integral > 40){
 		integral = 40;
 	}
+	
 	auto derivative = (error - previousError)/dt;
 	auto v = Kp*error + Ki*integral + Kd*derivative;
 	auto nv = pv+v;
