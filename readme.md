@@ -6,6 +6,7 @@ I left your old main.cpp file commeneted to make it easier for you to restore yo
 
 ToDo:
 
+Add more test to increase your coverage.
 Add more comments to the code in your style for unity purposes.
 Turn in the assigment. 
 
