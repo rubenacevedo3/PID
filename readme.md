@@ -9,6 +9,7 @@ ToDo:
 Add more test to increase your coverage.
 Add more comments to the code in your style for unity purposes
 and use cpplint.
+Change your UML Class Diagram to add the two new private class arributes  
 Turn in the assigment. 
 
 
